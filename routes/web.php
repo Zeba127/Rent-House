@@ -125,8 +125,8 @@ Route::get('/paymentlist', [AdminPaymentController::class,'paymentlist'])->name(
 Route::get('/repair', [RepairController::class,'repair'])->name('repair');
 
 // //houseinfo route
-// Route::get('/houseinfo/list', [HouseinfoController::class,'list'])->name('houseinfo.list');
-// Route::get('/houseinfo/create', [HouseinfoController::class,'createinfo'])->name('houseinfo.create');
+Route::get('/houseinfo/list', [HouseinfoController::class,'list'])->name('houseinfo.list');
+Route::get('/houseinfo/create', [HouseinfoController::class,'createinfo'])->name('houseinfo.create');
 // Route::post('/houseinfo/store',[HouseinfoController::class,'store'])->name('houseinfo.store');
 
 

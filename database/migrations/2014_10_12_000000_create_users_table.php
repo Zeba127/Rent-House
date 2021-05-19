@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('nidnumber');
             $table->string('phonenumber');
             $table->string('occupation');
-            $table->text('image');
+            $table->text('image')->default('default.jpg');
             $table->string('role');
             $table->integer('bkashrocketnumber');
             $table->timestamp('email_verified_at')->nullable();

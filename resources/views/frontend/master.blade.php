@@ -29,9 +29,10 @@
 
     <style>
         .banner{
-            background-image: url('./layouts/img.jpg');
+            background-image: url('images/logoimage.jpg')
             height:300px;
-            width: 300px
+            width: 300px;
+
         }
       .bd-placeholder-img {
         font-size: 1.125rem;

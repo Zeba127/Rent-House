@@ -9,10 +9,7 @@
 
     <div class="col-md-6">
         @csrf
-        <div class="form-group">
-            <label for="id">Enter  id:</label>
-            <input id="id"type="number"name="id"pleaceholder="id" class="form-control">
-        </div>
+
 
         <div class="form-group">
             <label for="id">Enter House id:</label>
@@ -27,6 +24,7 @@
             <label for="address">Enter House address:</label>
             <input id="address"type="text"name="house_address"pleaceholder="House_address" class="form-control">
         </div>
+        
         <div class="form-group">
             <label for="date">Enter Tolet date:</label>
             <input id="date"type="date"name="tolet_date"pleaceholder="Tolet_date" class="form-control">
@@ -53,7 +51,7 @@
             <label for="image"> Enter House image</label>
             <input type="file" class="form-control" id="image" name="house_image" aria-describedly="imageHelp" placeholder="Enter Name">
           </div>
-          
+
 
 
     <button type="submit" class="btn_btn-success"> submit</button>

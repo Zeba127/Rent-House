@@ -9,7 +9,7 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">id</th>
+
         <th scope="col">house_id</th>
         <th scope="col">house_name</th>
         <th scope="col">house_address</th>
@@ -31,7 +31,7 @@
         @foreach ($houseinfos as $key=>$data)
       <tr>
         <th scope="row">{{$key+1}}</th>
-        <td>{{$data->id}}</td>
+
         <td>{{$data->house_id}}</td>
         <td>{{$data->house_name}}</td>
         <td>{{$data->house_address}}</td>

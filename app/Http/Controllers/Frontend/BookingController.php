@@ -25,27 +25,52 @@ class BookingController extends Controller
     public function booking(Request $request)
     {
         $house=House::find($request->house_id);
-          $booking=Booking::create([
+        //avaible for booking
 
-            'house_id'=>$request->house_id,
-            'user_id'=>auth()->user()->id,
-            // 'flat_id'=>$request->id,
-            // 'flat_name'=>$request->name,
-            'flat_price'=>$request->price,
-            'bookingdate'=>$request->date,
-            'emargencyContactnumber'=>$request->number,
-            'bookingdetails'=>$request->details,
-             'status'=>1,
-             'flat_id'=>1,
-             'flat_name'=>1,
-        //   dd($request->all());
+        // $Date=date(($request->date));
 
-          ]);
-
-          Mail::to(auth()->user()->email)->send(new Bookingnotification($booking));
+        // $checkBook=Booking::where('house_id',$request->house_id)
+        //                     ->wheredate('bookingdate',$Date)
+        //                     ->first();
 
 
-        return redirect()->back()->with('massage','BookingDone');
 
-    }
+
+
+           //isnot avaible
+
+        //
+        {
+            $booking=Booking::create([
+
+                'house_id'=>$request->house_id,
+                'user_id'=>auth()->user()->id,
+                // 'flat_id'=>$request->id,
+                // 'flat_name'=>$request->name,
+                'flat_price'=>$request->price,
+                'bookingdate'=>$request->date,
+                'emargencyContactnumber'=>$request->number,
+                'bookingdetails'=>$request->details,
+                 'status'=>1,
+                 'flat_id'=>1,
+                 'flat_name'=>1,
+            //   dd($request->all());
+
+              ]);
+
+
+
+              Mail::to(auth()->user()->email)->send(new Bookingnotification($booking));
+
+
+              return redirect()->back()->with('message', 'Booking created Successfully');
+             }
+            //  else {
+            //     return redirect()->back()->with('message', 'Already booked.');
+            // }
+
+
+
+}
+
 }

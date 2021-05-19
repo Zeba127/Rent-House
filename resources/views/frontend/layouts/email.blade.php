@@ -23,5 +23,6 @@
         Flat_price:{{$bookingdata->flat_price}}
 
     </p>
+  
 </body>
 </html>

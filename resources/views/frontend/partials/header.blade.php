@@ -27,12 +27,36 @@
 
 
         <a href="{{ route('houseinfo.list') }}">Add_Houseinfo</a>
-        
+
         {{-- <a href="{{route('house')  }}">Add_Houseownerinfo</a>
         <a href="{{route('tenant')  }}">Add_tenantinfo</a> --}}
+
            @auth()
-           <span style="color:White">{{auth()->user()->name}}</span>
-           <a href="{{ route('logout') }}">logout</a>
+           <li>
+            <a href="#" style="position:relative; padding-left:50px;margin-right:20px">
+                <img src="/uploads/user/{{ Auth::user()->image }}" style="width:32px; height:32px; position:absolute;left:10px; border-radius:50%">
+                {{ Auth::user()->name }} <span class="caret"></span>
+            </a>
+
+            <a href="{{route('logout')}}">logout</a>
+
+            {{-- <ul class="dropdown-menu" role="menu">
+                <li><a href="{{'#'}}"><i class="fa fa-btn fa-user"></i>Profile</a></li>
+                <li><a href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+            </ul> --}}
+        </li>
+           {{-- <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <span style="color:White">{{auth()->user()->name}}</span>
+            <a>
+           {{-- <img src="url('/uploads/user/')" >{{auth()->user()->image}} alt="abc"> --}}
+
+
+             {{-- <ul classs="dropdown-menu" role="menu">
+            <li style="display:inline"><a href="#"><i class="fa fa-btn fa-user"></i> profile image</a></li>
+           <li style="display:inline"><a href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out"></i> logout</a></li>
+             </ul>
+             </li> --}} --}}
 
            @else
 
@@ -56,8 +80,11 @@
 
 
 
+
+
       </div>
 
       </div>
     </div>
+
   </header>
