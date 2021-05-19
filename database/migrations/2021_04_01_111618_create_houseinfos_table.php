@@ -19,6 +19,7 @@ class CreateHouseinfosTable extends Migration
             $table->string('house_name');
             $table->integer('user_id');
             $table->string('house_address');
+            $table->integer('phone_number');
             $table->string('tolet_date');
             $table->text('house_image');
             $table->string('house_description');

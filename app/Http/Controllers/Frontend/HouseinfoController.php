@@ -72,13 +72,14 @@ class HouseinfoController extends Controller
             'user_id'=>auth()->user()->id,
             'house_name'=>$request->house_name,
             'house_address'=>$request->house_address,
+            'phone_number'=>$request->phone_number,
             'tolet_date'=>$request->tolet_date,
             'house_description'=>$request->house_description,
             'floor_description'=>$request->floor_description,
             'flat_description'=>$request->flat_description,
             'flat_price'=>$request->flat_price,
             'house_image'=>$filename,
-        
+
 
 
         ]);

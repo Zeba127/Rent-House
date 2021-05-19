@@ -30,7 +30,12 @@
             <label for="address">Enter House address:</label>
             <input id="address"type="text"name="house_address"pleaceholder="House_address" class="form-control">
         </div>
-       
+        <div class="form-group">
+            <label for="number">Enter Phone Number:</label>
+            <input id="number"type="number"name="phone_number"pleaceholder="Phone_number" class="form-control">
+        </div>
+
+
         <div class="form-group">
             <label for="date">Enter Tolet date:</label>
             <input id="date"type="date"name="tolet_date"pleaceholder="Tolet_date" class="form-control">

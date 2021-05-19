@@ -13,6 +13,7 @@
         <th scope="col">house_id</th>
         <th scope="col">house_name</th>
         <th scope="col">house_address</th>
+        <th scope="col">phone_number</th>
         <th scope="col">tolet_date</th>
         <th scope="col">house_description</th>
         <th scope="col">floor_description</th>
@@ -33,6 +34,7 @@
         <td>{{$data->house_id}}</td>
         <td>{{$data->house_name}}</td>
         <td>{{$data->house_address}}</td>
+        <td>{{$data->phone_number}}</td>
         <td>{{$data->tolet_date}}</td>
         <td>{{$data->house_description}}</td>
         <td>{{$data->floor_description}}</td>

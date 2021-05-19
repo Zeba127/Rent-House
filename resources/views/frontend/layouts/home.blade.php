@@ -36,6 +36,8 @@
             <h3>BDT <span style="font-size:40px">{{ $data->flat_price }}</span></h3>
             <p class="card-text">{{ $data->house_address }}</p>
             <p class="card-text"> <strong>Tolet_date: </strong> {{ $data->tolet_date }}</p>
+            <p class="btn btn-primary "> <strong>Contact Number :</strong> {{ $data->phone_number }}</p>
+
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group d-flex justify-content-space-between">
                   {{-- <button type="button" class="btn btn-primary" >Booknow</button>
