@@ -67,7 +67,7 @@
 
 
 
-    <button type="submit" class="btn_btn-success"> submit</button>
+    <button type="Submit" class="btn btn-success"> Submit</button>
     </div>
 </form>
 

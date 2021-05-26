@@ -43,8 +43,11 @@ Route::post('/dologin',[UserController::class,'dologin'])->name('login');
 Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
 //booking
-Route::get('/show/house/{id}',[BookingController::class,'showhouse'])->name('show.house');
-Route::post('/booking',[BookingController::class,'booking'])->name('house.booking');
+
+Route::group(['middleware'=>'auth'],function(){
+    Route::get('/show/house/{id}',[BookingController::class,'showhouse'])->name('show.house');
+    Route::post('/booking',[BookingController::class,'booking'])->name('house.booking');
+});
 
 
 //houseinfo route
@@ -59,8 +62,10 @@ Route::get('/details/house/{id}', [DetailsController::class,'detailshouse'])->na
 
 
 //payment
+Route::group(['middleware'=>'auth'],function(){
 Route::get('/payment/house/{id}',[PaymentController::class,'paymenthouse'])->name('payment.house');
 Route::post('/payment',[PaymentController::class,'payment'])->name('payment.info');
+});
 
 
 

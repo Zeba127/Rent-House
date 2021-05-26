@@ -7,11 +7,14 @@
         <form action="{{ route('house.booking') }}"method="post">
             @csrf
 
-         
 
-         @if(session()->has('success'))
-            <div class="alert alert-success">{{session()->get('success')}}</div>
+
+         @if(session()->has('message'))
+            <div class="alert alert-success">{{session()->get('message')}}</div>
          @endif
+         @if(session()->has('error'))
+         <div class="alert alert-danger">{{session()->get('error')}}</div>
+      @endif
 
          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
 
