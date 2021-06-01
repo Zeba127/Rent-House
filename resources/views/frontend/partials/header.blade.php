@@ -26,19 +26,20 @@
 
 
 
-        <a href="{{ route('houseinfo.list') }}">Add_Houseinfo</a>
+        <a href="{{ route('houseinfo.list') }}"class="btn btn-primary mr-2">Add_Houseinfo</a>
 
         {{-- <a href="{{route('house')  }}">Add_Houseownerinfo</a>
         <a href="{{route('tenant')  }}">Add_tenantinfo</a> --}}
 
            @auth()
            <li>
-            <a href="#" style="position:relative; padding-left:50px;margin-right:20px">
+            <a href="#" style="position:relative; padding-left:50px;margin-right:20px"class="btn btn-primary mr-2">
                 <img src="/uploads/user/{{ Auth::user()->image }}" style="width:32px; height:32px; position:absolute;left:10px; border-radius:50%">
-                {{ Auth::user()->name }} <span class="caret"></span>
+                {{ Auth::user()->name }} <span class="Caret"></span>
+
             </a>
 
-            <a href="{{route('logout')}}">logout</a>
+            <a href="{{route('logout')}}"class="btn btn-primary mr-2">logout</a>
 
             {{-- <ul class="dropdown-menu" role="menu">
                 <li><a href="{{'#'}}"><i class="fa fa-btn fa-user"></i>Profile</a></li>
@@ -60,9 +61,9 @@
 
            @else
 
-        <a href="{{route('login.form')}}">login</a>
+        <a href="{{route('login.form')}}"class="btn btn-primary mr-2">login</a>
 
-        <a href="{{route('registration.form')}}">Registration</a>
+        <a href="{{route('registration.form')}}"class="btn btn-primary mr-2">Registration</a>
 
         @endauth
          <div class="row">

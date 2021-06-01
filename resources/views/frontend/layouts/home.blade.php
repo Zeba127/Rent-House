@@ -36,12 +36,11 @@
             <h3>BDT <span style="font-size:40px">{{ $data->flat_price }}</span></h3>
             <p class="card-text">{{ $data->house_address }}</p>
             <p class="card-text"> <strong>Tolet_date: </strong> {{ $data->tolet_date }}</p>
-            <p class="btn btn-primary "> <strong>Contact Number :</strong> {{ $data->phone_number }}</p>
+            <p class="btn btn-primary"> Contact Number :</p>{{ $data->phone_number }}
 
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group d-flex justify-content-space-between">
-                  {{-- <button type="button" class="btn btn-primary" >Booknow</button>
-                  <button type="button" class="btn btn-info">Details</button> --}}
+                 
                   <a href="{{ route('show.house',$data->id) }}" class="btn btn-primary mr-2"style="margin-right: 20px"><i class="fa fa-home" style="margin-right:10px"></i>Booknow</a>
                 <a href="{{ route('details.house',$data->id) }}"class="btn btn-info "style="margin-right:20px"><i class="fa fa-info-circle" style="margin-right:10px"></i>Details</a>
                 <a href="{{ route('payment.house',$data->id) }}" class="btn btn-success mr-2"style="margin-right: 20px"><i class="fa fa-credit-card"style="margin-right:10px"></i>Payment</a>
