@@ -77,7 +77,9 @@
 
        </form>
    </div>
-  <div class="col-md-2">
+   <div class="row row-cols-sm-2 ">
+
+
 
   </div>
 </div>

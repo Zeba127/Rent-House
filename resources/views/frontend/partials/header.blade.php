@@ -26,7 +26,7 @@
 
 
 
-        <a href="{{ route('houseinfo.list') }}"class="btn btn-primary mr-2">Add_Houseinfo</a>
+        <a href="{{ route('houseinfo.list') }}"class="btn btn-primary mr-2">For Tolet</a>
 
         {{-- <a href="{{route('house')  }}">Add_Houseownerinfo</a>
         <a href="{{route('tenant')  }}">Add_tenantinfo</a> --}}

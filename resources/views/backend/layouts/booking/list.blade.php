@@ -23,7 +23,6 @@
         <th scope="col">#</th>
         <th scope="col">House Name</th>
         <th scope="col">Customer Name</th>
-        {{-- <th scope="col">flat_name</th> --}}
         <th scope="col">flat_price</th>
         <th scope="col">Date</th>
         <th scope="col">Contact</th>
@@ -41,7 +40,6 @@
       <td>{{ $key+1 }}</td>
       <td>{{$data->houseinfo->house_name}}</td>
       <td>{{$data->user->name}}</td>
-      {{-- <td>{{$data->flat_name}}</td> --}}
       <td>{{$data->flat_price}}</td>
       <td>{{$data->bookingdate->format('Y-m-d')}}</td>
       <td>{{$data->emargencyContactnumber}}</td>
@@ -68,12 +66,14 @@
                    href="{{route('booking.status',['id'=>$data->id,'status'=>'approved'])}}">Approved</a>
                 <a class="dropdown-item"
                    href="{{route('booking.status',['id'=>$data->id,'status'=>'rejected'])}}">Reject</a>
+                   <a class="dropdown-item"
+                   href="{{route('booking.status',['id'=>$data->id,'status'=>'pending'])}}">Pending</a>
             </div>
 
         </div>
 
       </td>
-      {{-- <td><a href="">view</a></td> --}}
+      
 
 
 

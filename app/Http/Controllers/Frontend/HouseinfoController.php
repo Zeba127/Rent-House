@@ -11,8 +11,8 @@ class HouseinfoController extends Controller
     public function list(){
 
         $houseinfos=Houseinfo::all();
-        return view('backend.layouts.houseinfo.list',compact('houseinfos'));
-    }
+       return view('backend.layouts.houseinfo.list',compact('houseinfos'));
+     }
 
     public function search(Request $request)
     {
@@ -32,11 +32,12 @@ class HouseinfoController extends Controller
 
     }
 
+
     public function createinfo()
     {
         $houseinfos=Houseinfo::all();
 
-        return view('backend.layouts.houseinfo.create',compact('houseinfos'));
+        return view('frontend.layouts.houseinfo.create',compact('houseinfos'));
     }
     public function store(Request $request)
     {
@@ -62,29 +63,32 @@ class HouseinfoController extends Controller
         }
 
 
+    
+
+    //get a unique file name and store into database
+
+    Houseinfo::create([
+        'id'=>$request->id,
+        'house_id'=>$request->house_id,
+        'user_id'=>auth()->user()->id,
+        'house_name'=>$request->house_name,
+        'house_address'=>$request->house_address,
+        'phone_number'=>$request->phone_number,
+        'tolet_date'=>$request->tolet_date,
+        'house_description'=>$request->house_description,
+        'floor_description'=>$request->floor_description,
+        'flat_description'=>$request->flat_description,
+        'flat_name'=>$request->flat_name,
+        'flat_size'=>$request->flat_size,
+        'flat_price'=>$request->flat_price,
+        'house_image'=>$filename,
 
 
-        //get a unique file name and store into database
 
-        Houseinfo::create([
-            'id'=>$request->id,
-            'house_id'=>$request->house_id,
-            'user_id'=>auth()->user()->id,
-            'house_name'=>$request->house_name,
-            'house_address'=>$request->house_address,
-            'phone_number'=>$request->phone_number,
-            'tolet_date'=>$request->tolet_date,
-            'house_description'=>$request->house_description,
-            'floor_description'=>$request->floor_description,
-            'flat_description'=>$request->flat_description,
-            'flat_price'=>$request->flat_price,
-            'house_image'=>$filename,
+    ]);
 
+    return redirect()->route('houseinfo.list');
 
-
-        ]);
-
-        return redirect()->route('houseinfo.list');
     }
 
 }

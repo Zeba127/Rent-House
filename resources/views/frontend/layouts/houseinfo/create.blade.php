@@ -8,14 +8,11 @@
 
 
 
-    <div class="col-md-6">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
+
         @csrf
 
 
-        {{-- <div class="form-group">
-            <label for="id">Enter  id:</label>
-            <input id="id"type="number"name="id"pleaceholder="id" class="form-control">
-        </div> --}}
 
         <div class="form-group">
             <label for="id">Enter House id:</label>
@@ -50,13 +47,24 @@
             <label for="description">Enter Floor description:</label>
             <textarea id="description"type="text"name="floor_description"pleaceholder="floor_description" class="form-control"></textarea>
         </div>
+
+        <div class="form-group">
+            <label for="name">Enter Flat Name:</label>
+            <input id="name"type="text"name="flat_name"pleaceholder="flat_name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="size">Enter Flat Size:</label>
+            <input id="size"type="text"name="flat_size"pleaceholder="flat_size" class="form-control">
+        </div>
         <div class="form-group">
             <label for="description">Enter Flat description:</label>
             <textarea id="description"type="text"name="flat_description"pleaceholder="flat_description" class="form-control"></textarea>
         </div>
+
+
         <div class="form-group">
             <label for="description">Enter Flat Price:</label>
-            <textarea id="price"type="price"name="flat_price"pleaceholder="flat_price" class="form-control"></textarea>
+            <input id="price"type="price"name="flat_price"pleaceholder="flat_price" class="form-control">
         </div>
 
         <div class="form-group">

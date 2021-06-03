@@ -4,19 +4,19 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\http\Controllers\Admin\FloorController;
 use App\Http\Controllers\Admin\HouseController;
-use App\http\Controllers\Admin\RepairController;
+use App\http\Controllers\Admin\ReportController;
 use App\http\Controllers\Admin\TenantController;
 
 // use App\http\Controllers\Admin\PaymentController as AdminPaymentController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\BookingController;
-// use App\http\Controllers\Admin\HouseinfoController;
 use App\http\Controllers\Frontend\HouseinfoController;
 use App\http\Controllers\Frontend\PaymentController;
 use App\http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Admin\BookingController as AdminBookingController;
 use App\Http\Controllers\Admin\PaymentController as AdminPaymentController;
+
 use App\Http\Controllers\frontend\DetailsController;
 
 // App\Http\Controllers\house;
@@ -51,11 +51,12 @@ Route::group(['middleware'=>'auth'],function(){
 
 
 //houseinfo route
+Route::group(['middleware'=>'auth'],function(){
 Route::get('/houseinfo/list', [HouseinfoController::class,'list'])->name('houseinfo.list');
-Route::post('/houseinfo/search', [HouseinfoController::class,'search'])->name('houseinfo.search');
 Route::get('/houseinfo/create', [HouseinfoController::class,'createinfo'])->name('houseinfo.create');
 Route::post('/houseinfo/store',[HouseinfoController::class,'store'])->name('houseinfo.store');
-
+Route::post('/houseinfo/search', [HouseinfoController::class,'search'])->name('houseinfo.search');
+});
 
 // details
 Route::get('/details/house/{id}', [DetailsController::class,'detailshouse'])->name('details.house');
@@ -126,14 +127,10 @@ Route::get('/booking/{id}/{status}',[AdminBookingController::class,'status'])->n
 Route::get('/paymentlist', [AdminPaymentController::class,'paymentlist'])->name('payment.list');
 
 
-//repair route
-Route::get('/repair', [RepairController::class,'repair'])->name('repair');
+//report route
+Route::get('/report', [ReportController::class,'report'])->name('report');
 
-// //houseinfo route
-Route::get('/houseinfo/list', [HouseinfoController::class,'list'])->name('houseinfo.list');
-Route::get('/houseinfo/create', [HouseinfoController::class,'createinfo'])->name('houseinfo.create');
-// Route::post('/houseinfo/store',[HouseinfoController::class,'store'])->name('houseinfo.store');
-
+//houseinfo route
 
 
 

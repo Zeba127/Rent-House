@@ -67,9 +67,9 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('repair')}}">
+            <a class="nav-link active" aria-current="page" href="{{route('report')}}">
               <span data-feather="home"></span>
-              repair
+              report
 
 
             </a>

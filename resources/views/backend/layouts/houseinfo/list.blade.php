@@ -18,6 +18,8 @@
         <th scope="col">house_description</th>
         <th scope="col">floor_description</th>
         <th scope="col">flat_description</th>
+        <th scope="col">flat_name</th>
+        <th scope="col">flat_size</th>
         <th scope="col">flat_price</th>
         <th scope="col">house_image</th>
         <th scope="col">Action</th>
@@ -41,6 +43,8 @@
         <td>{{$data->house_description}}</td>
         <td>{{$data->floor_description}}</td>
         <td>{{$data->flat_description}}</td>
+        <td>{{$data->flat_name}}</td>
+        <td>{{$data->flat_size}}</td>
         <td>{{$data->flat_price}}</td>
         <td>
             <img width="100px"src="{{url('/uploads/house/'.$data->house_image) }}" alt="">
