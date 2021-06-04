@@ -10,8 +10,6 @@ admin-dashboard
 <h1>BookingReport</h1>
 
 <form action="{{ route('report') }}" method="GET">
-
-
 <div class="row">
     <div class="col-md-8">
 
@@ -25,13 +23,9 @@ admin-dashboard
     <div class="col-md-6">
         <div class="form-group">
             <button type="Submit" class="btn btn-primary">Search</button>
-            <button type="Submit"onclick=" printDiv()" class="btn btn-success">Print</button>
-
-
+            <button type="button"onclick="printDiv('printArea')" class="btn btn-success">Print</button>
         </div>
     </div>
-
-
 </div>
 
 </form>
@@ -87,7 +81,8 @@ admin-dashboard
 
 <script type="text/javascript">
 
- function printDiv(){
+
+function printDiv(printArea){
 			var printContents = document.getElementById(printArea).innerHTML;
 			var originalContents = document.body.innerHTML;
 
@@ -100,8 +95,8 @@ admin-dashboard
 		}
 
 
-
 </script>
+
 
 
 

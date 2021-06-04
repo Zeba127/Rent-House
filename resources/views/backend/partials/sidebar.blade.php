@@ -8,43 +8,42 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('dashboard')}}">
               <span data-feather="home"></span>
-              dashboard
+              <button type="Submit" class="btn btn-primary">Dashboard</button>
+
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{ route('house') }}">
               <span data-feather="home"></span>
-              houseowner
+              <button type="Submit" class="btn btn-primary">Houseowner</button>
+
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('houseinfo.list')}}">
               <span data-feather="home"></span>
-              houseinfo
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('floor.info')}}">
-              <span data-feather="home"></span>
-              floor
+              <button type="Submit" class="btn btn-primary">Houseinfo</button>
+
             </a>
           </li>
 
-          </li>
+
+
 
 
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('tenant')}}">
               <span data-feather="home"></span>
-               tenant
+               <button type="Submit" class="btn btn-primary">Tenant</button>
 
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('show.booking')}}">
               <span data-feather="home"></span>
-               booking
+              <button type="Submit" class="btn btn-primary">Booking</button>
+
 
             </a>
           </li>
@@ -60,7 +59,8 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('payment.list')}}">
               <span data-feather="home"></span>
-              payment
+              <button type="Submit" class="btn btn-primary">Payment</button>
+
 
 
             </a>
@@ -69,7 +69,8 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('report')}}">
               <span data-feather="home"></span>
-              report
+              <button type="Submit" class="btn btn-primary">Report</button>
+
 
 
             </a>

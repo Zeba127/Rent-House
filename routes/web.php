@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
-use App\http\Controllers\Admin\FloorController;
 use App\Http\Controllers\Admin\HouseController;
 use App\http\Controllers\Admin\ReportController;
 use App\http\Controllers\Admin\TenantController;
@@ -136,11 +135,6 @@ Route::get('/report', [ReportController::class,'report'])->name('report');
 
 
 
-
-//floor route
-Route::get('/floorinfo', [FloorController::class,'list'])->name('floor.info');
-Route::get('/floorinfo/create', [FloorController::class,'createinfo'])->name('floor.create');
-Route::post('/floorinfo/store',[FloorController::class,'store'])->name('floor.store');
 
 
 
