@@ -12,7 +12,7 @@
 
         @csrf
 
-
+        <h5>[5% detect on total flat price]</h5>
 
         <div class="form-group">
             <label for="id">Enter House id:</label>

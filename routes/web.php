@@ -55,6 +55,7 @@ Route::get('/houseinfo/list', [HouseinfoController::class,'list'])->name('housei
 Route::get('/houseinfo/create', [HouseinfoController::class,'createinfo'])->name('houseinfo.create');
 Route::post('/houseinfo/store',[HouseinfoController::class,'store'])->name('houseinfo.store');
 Route::post('/houseinfo/search', [HouseinfoController::class,'search'])->name('houseinfo.search');
+
 });
 
 // details
@@ -74,14 +75,14 @@ Route::post('/payment',[PaymentController::class,'payment'])->name('payment.info
 
 
 
-//Houseowner routes
+// //Houseowner routes
 
-Route::get('/house',[HouseController::class,'list'])->name('house');
-Route::post('/house/create',[HouseController::class,'create'])->name('house.create');
+// Route::get('/house',[HouseController::class,'list'])->name('house');
+// Route::post('/house/create',[HouseController::class,'create'])->name('house.create');
 
-//Tenant routes
-Route::get('/tenant', [TenantController::class,'list'])->name('tenant');
-Route::post('/tenant/create', [TenantController::class,'create'])->name('tenant.create');
+// //Tenant routes
+// Route::get('/tenant', [TenantController::class,'list'])->name('tenant');
+// Route::post('/tenant/create', [TenantController::class,'create'])->name('tenant.create');
 
 
 //adminroute backend
@@ -129,7 +130,13 @@ Route::get('/paymentlist', [AdminPaymentController::class,'paymentlist'])->name(
 //report route
 Route::get('/report', [ReportController::class,'report'])->name('report');
 
-//houseinfo route
+//house route
+Route::get('/house',[HouseController::class,'list'])->name('house');
+Route::post('/house/create',[HouseController::class,'create'])->name('house.create');
+
+//Tenant routes
+Route::get('/tenant', [TenantController::class,'list'])->name('tenant');
+Route::post('/tenant/create', [TenantController::class,'create'])->name('tenant.create');
 
 
 

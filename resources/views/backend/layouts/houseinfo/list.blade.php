@@ -5,6 +5,8 @@
 @section('content')
 
 <a class="btn btn-success"href="{{route('houseinfo.create')}}">Addhouseinfo</a>
+
+
 <table class="table">
     <thead>
       <tr>
@@ -53,8 +55,7 @@
 
         <td>
             {{-- <a class="btn btn-success"  href="">View</a> --}}
-            <a class="btn btn-primary"  href="">Edit</a>
-            <a class="btn btn-danger" href="">Delete</a>
+             <a class="btn btn-danger" href="">Delete</a>
         </td>
 
 
